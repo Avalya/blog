@@ -3,10 +3,9 @@ from .views import (
     BlogListView,
     BlogDetailView,
     BlogCreateView,
-    BlogUpdateView, 
+    BlogUpdateView,
     BlogDeleteView,  # new
 )
-
 urlpatterns = [
     path("post/new/", BlogCreateView.as_view(), name="post_new"),
     path("post/<int:pk>/", BlogDetailView.as_view(), name="post_detail"),
@@ -16,3 +15,5 @@ urlpatterns = [
         name="post_delete"),  # new
     path("", BlogListView.as_view(), name="home"),
 ]
+
+
